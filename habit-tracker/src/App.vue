@@ -4,7 +4,7 @@ import HabbitGoalVue from "./components/HabbitGoal.vue";
 
 <template>
   <div class="book-tracker-body">
-    Hello world
-    <HabbitGoalVue id="goals" />
+    <h1>Book tracker</h1>
+    <HabbitGoalVue />
   </div>
 </template>
