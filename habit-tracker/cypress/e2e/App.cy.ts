@@ -5,14 +5,12 @@ describe("The main page renders", () => {
     cy.get(".book-tracker-body").should("be.visible").contains("Book tracker");
   });
 
-  it("Get Goals", () => {
+  it("Get Quasar elements and labels", () => {
     cy.visit("/");
-    cy.get(".goals-page")
-      .should("be.visible")
-      .contains("Reading goals")
-      .contains("Books")
-      .contains("Pages");
-    cy.get("#books-goal").should("be.visible");
-    cy.get("#pages-goal").should("be.visible");
+    cy.get(".goals-page").should("be.visible").contains("Reading goals");
+    cy.get("#books-goal").should("be.visible"); //quasar component
+    cy.get("#pages-goal"); //quasar component
+    cy.get("#minutes-goal"); //quasar component
+    cy.get(".goal-label");
   });
 });
