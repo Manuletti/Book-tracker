@@ -23,10 +23,10 @@ import HelloWorld from "./components/HelloWorld.vue";
         :thickness="0.6"
         color="lime"
         center-color="grey-8"
-        class="q-ma-md"   
+        class="q-ma-md"
       />
 
-      <nav>
+      <nav id="nav-id">
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
