@@ -1,43 +1,42 @@
+<script setup lang="ts">
+const goals = defineProps<{
+  name: string | [];
+  goal: "achive" | "limit";
+  amount: number;
+  value: number;
+}>();
+console.log(goals);
+</script>
+
 <template>
   <section class="goals-page">
-    <h2>Reading goals</h2>
+    <label class="goal-label" for="books-goal">{{ goals.name }}</label>
     <q-circular-progress
-      class="circular-goal"
-      id="books-goal"
+      class="circular-progress"
+      id="habit-tracker"
       size="200px"
       track-color="light-blue"
-      thickness="0.5"
-      show-value
-      value="15"
-      max=100
-      reverse
-    />
-    <label class="goal-label" for="books-goal">Books</label>
-    <q-circular-progress
-      id="pages-goal"
-      size="200px"
       color="pink"
-      track-color="light-blue"
-      thickness="0.5"
-      show-value
-      value="257"
-      max="1000"
       reverse
-    />
-    <label class="goal-label" for="pages-goal">Pages</label>    
-    <q-circular-progress
-      id="minutes-goal"
-      size="200px"
-      color="pink"
-      track-color="light-blue"
-      thickness="0.5"
       show-value
-      value="2527"
-      max="10000"
-      reverse
+      :value="goals.value"
+      :max="goals.amount"
     />
-    <label class="goal-label" for="minutes-goal">Minutes</label>
+    <p>Goal: {{ goals.amount }}</p>
+    <p>Left: {{ goals.amount - goals.value }}</p>
   </section>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+.goals-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.goal-label {
+  font-size: xx-large;
+}
+.circular-progress {
+  margin: 1rem;
+}
+</style>
