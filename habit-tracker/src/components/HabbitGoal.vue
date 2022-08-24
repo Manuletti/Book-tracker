@@ -12,7 +12,7 @@ console.log(goals);
   <section class="goals-page">
     <label class="goal-label" for="books-goal">{{ goals.name }}</label>
     <q-circular-progress
-      class="circular-progress"
+      class="goal-progress"
       id="habit-tracker"
       size="200px"
       track-color="light-blue"
@@ -36,7 +36,7 @@ console.log(goals);
 .goal-label {
   font-size: xx-large;
 }
-.circular-progress {
+.goal-progress {
   margin: 1rem;
 }
 </style>
