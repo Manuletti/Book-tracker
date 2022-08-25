@@ -10,4 +10,8 @@ describe("The main page renders", () => {
     cy.get(".book-list");
     cy.get(".finished-list");
   });
+
+  it("Goal pages render and function properly", () => {
+    cy.visit("/");
+  });
 });

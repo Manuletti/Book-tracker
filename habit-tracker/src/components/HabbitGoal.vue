@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const goals = defineProps<{
   name: string | [];
-  goal: "achive" | "limit";
+  goal?: "achive" | "limit";
   amount: number;
   value: number;
 }>();
@@ -14,7 +14,7 @@ console.log(goals);
     <q-circular-progress
       class="goal-progress"
       id="habit-tracker"
-      size="200px"
+      size="150px"
       track-color="light-blue"
       color="pink"
       reverse
