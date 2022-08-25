@@ -1,9 +1,10 @@
 <script setup lang="ts">
+import { ref, reactive } from "vue";
 import HabbitGoalVue from "./components/HabbitGoal.vue";
 import BookListVue from "./components/BookList.vue";
 import FinishedListVue from "./components/FinishedList.vue";
-import BookList from "./components/BookList.vue";
-const readingGoal = {
+
+const readingGoal = reactive({
   name: "Books",
   goal: "achive",
   amount: 15,
@@ -12,8 +13,16 @@ const readingGoal = {
   minutes: 2456,
   pagesGoal: 2000,
   pages: 1345,
-};
-console.log(readingGoal);
+});
+
+let showSetInput = ref(false);
+let newGoal = ref(null);
+function setGoal(): void {
+  readingGoal.amount = newGoal;
+  console.log(readingGoal.amount)
+  newGoal.value = null;
+  showSetInput.value = !showSetInput.value;
+}
 </script>
 
 <template>
@@ -33,8 +42,18 @@ console.log(readingGoal);
         :amount="readingGoal.timeGoal"
         :value="readingGoal.minutes"
       />
+      <button id="set-goal" @click="showSetInput = !showSetInput">
+        Set the goal
+      </button>
+      <input
+        id="goal-input"
+        type="number"
+        v-if="showSetInput"
+        v-model="newGoal"
+      /> {{newGoal}}
+      <button id="goal-submit" @click="setGoal()" v-if="showSetInput">Set</button>
     </div>
-    <BookList />
+    <BookListVue />
     <FinishedListVue />
   </div>
 </template>
