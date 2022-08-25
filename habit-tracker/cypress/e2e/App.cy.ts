@@ -11,7 +11,21 @@ describe("The main page renders", () => {
     cy.get(".finished-list");
   });
 
-  it("Goal pages render and function properly", () => {
+  it("Resetting the goal", () => {
     cy.visit("/");
+    cy.get("#goal").contains("Goal: 15");
+    cy.get("#goal-inpit").should("be.hidden")
+    cy.get("#set-goal").click();
+    cy.get("#goal-input").should("be.visible").type("100");
+    cy.get("#goal-submit").click();
+    cy.get("#goal").contains("Goal: 100");
+    cy.get("#set-goal").click();
+    cy.get("3goal-input").type("8");
+    cy.get("#goal").contains("Goal: 8");
+    cy.get("#goal-submit").click();
+    cy.get("#set-goal").click();
+    cy.get("#goal-input").type("Hello");
+    cy.get("#goal-submit").click();
+    cy.contains("Please, input a number")
   });
 });

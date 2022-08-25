@@ -22,7 +22,7 @@ console.log(goals);
       :value="goals.value"
       :max="goals.amount"
     />
-    <p>Goal: {{ goals.amount }}</p>
+    <p id="goal">Goal: {{ goals.amount }}</p>
     <p>Left: {{ goals.amount - goals.value }}</p>
   </section>
 </template>
