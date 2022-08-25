@@ -5,6 +5,8 @@ describe("The main page renders", () => {
     cy.get(".book-tracker-body").should("be.visible");
     cy.get(".habit-title");
     cy.get(".goals-page");
+    cy.get(".pages-score");
+    cy.get(".time-reading-goal")
     cy.get(".book-list");
     cy.get(".finished-list");
   });
