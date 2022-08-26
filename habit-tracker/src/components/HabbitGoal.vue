@@ -5,7 +5,6 @@ const goals = defineProps<{
   amount: number;
   value: number;
 }>();
-console.log(goals);
 </script>
 
 <template>

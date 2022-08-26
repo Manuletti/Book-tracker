@@ -16,11 +16,13 @@ const readingGoal = reactive({
 });
 
 let showSetInput = ref(false);
-let newGoal = ref(null);
+let newGoal: Ref<any> = ref(null);
 function setGoal(): void {
+  if (newGoal.value <= 0 || typeof newGoal.value !== "number") {
+    showSetInput.value = !showSetInput.value;
+    return alert("The goal should be a positive number");
+  }
   readingGoal.amount = newGoal;
-  console.log(readingGoal.amount)
-  newGoal.value = null;
   showSetInput.value = !showSetInput.value;
 }
 </script>
@@ -50,8 +52,10 @@ function setGoal(): void {
         type="number"
         v-if="showSetInput"
         v-model="newGoal"
-      /> {{newGoal}}
-      <button id="goal-submit" @click="setGoal()" v-if="showSetInput">Set</button>
+      />
+      <button id="goal-submit" @click="setGoal()" v-if="showSetInput">
+        Set
+      </button>
     </div>
     <BookListVue />
     <FinishedListVue />
