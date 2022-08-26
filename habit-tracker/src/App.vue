@@ -3,6 +3,7 @@ import { ref, reactive } from "vue";
 import HabbitGoalVue from "./components/HabbitGoal.vue";
 import BookListVue from "./components/BookList.vue";
 import FinishedListVue from "./components/FinishedList.vue";
+import BookGoalSettingsVue from "./components/BookGoalSettings.vue";
 
 const readingGoal = reactive({
   name: "Books",
@@ -15,8 +16,8 @@ const readingGoal = reactive({
   pages: 1345,
 });
 
-let showSetInput = ref(false);
-let newGoal: Ref<any> = ref(null);
+const showSetInput = ref(false);
+const newGoal: Ref<any> = ref(null);
 function setGoal(): void {
   if (newGoal.value <= 0 || typeof newGoal.value !== "number") {
     showSetInput.value = !showSetInput.value;
@@ -44,18 +45,7 @@ function setGoal(): void {
         :amount="readingGoal.timeGoal"
         :value="readingGoal.minutes"
       />
-      <button id="set-goal" @click="showSetInput = !showSetInput">
-        Set the goal
-      </button>
-      <input
-        id="goal-input"
-        type="number"
-        v-if="showSetInput"
-        v-model="newGoal"
-      />
-      <button id="goal-submit" @click="setGoal()" v-if="showSetInput">
-        Set
-      </button>
+      <BookGoalSettingsVue />
     </div>
     <BookListVue />
     <FinishedListVue />

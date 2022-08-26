@@ -4,7 +4,8 @@ import { Quasar } from "quasar";
 
 import App from "./App.vue";
 
-import "@quasar/extras/material-icons/material-icons.css";
+import iconSet from "quasar/icon-set/bootstrap-icons";
+import "@quasar/extras/bootstrap-icons/bootstrap-icons.css";
 import "quasar/src/css/index.sass";
 
 const app = createApp(App);
@@ -12,6 +13,7 @@ const app = createApp(App);
 app.use(createPinia());
 app.use(Quasar, {
   plugins: {},
+  iconSet: iconSet,
 });
 
 app.mount("#app");
