@@ -4,6 +4,7 @@ const goals = defineProps<{
   goal?: "achive" | "limit";
   amount: number;
   value: number;
+  editable: boolean;
 }>();
 </script>
 
@@ -21,7 +22,8 @@ const goals = defineProps<{
       :value="goals.value"
       :max="goals.amount"
     />
-    <p id="goal">Goal: {{ goals.amount }}</p>
+    <p id="goal" v-if="!goals.editable">Goal: {{ goals.amount }}</p>
+    <slot v-else />
     <p>Left: {{ goals.amount - goals.value }}</p>
   </section>
 </template>
@@ -37,5 +39,8 @@ const goals = defineProps<{
 }
 .goal-progress {
   margin: 1rem;
+}
+.title {
+  display: flex;
 }
 </style>
