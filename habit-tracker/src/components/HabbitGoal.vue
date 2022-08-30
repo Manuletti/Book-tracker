@@ -6,6 +6,7 @@ const goals = defineProps<{
   value: number;
   editable: boolean;
 }>();
+console.log(typeof goals.editable)
 </script>
 
 <template>
@@ -22,6 +23,7 @@ const goals = defineProps<{
       :value="goals.value"
       :max="goals.amount"
     />
+    <!-- This doesn't render in pages and minutes component -->
     <p id="goal" v-if="!goals.editable">Goal: {{ goals.amount }}</p>
     <slot v-else />
     <p>Left: {{ goals.amount - goals.value }}</p>

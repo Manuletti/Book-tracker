@@ -1,0 +1,8 @@
+$default-color: rgb(247, 236, 210);
+
+.book-tracker-body {
+    background-color: $default-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+};
