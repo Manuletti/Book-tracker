@@ -1,38 +1,45 @@
-$default-color: rgb(247, 236, 210);
+$default-background-color: rgb(247, 236, 210);
+$secondary-color: rgb(248, 170, 15);
+
+body {
+    background-color: $default-background-color;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+};
 
 .book-tracker-body {
-    background-color: $default-color;
     display: flex;
     flex-direction: column;
     align-items: center;
     align-self: center;
-    max-width: 60vh;
-    width: auto;
+    max-width: min-content;
 };
 
 .goals {
-    border: 1px;
-    border-style: solid;
-    border-radius: 20px;
-    border-color: black;
-    
-    padding: 5%;
-    margin-bottom: 5%;
     width: 100%;
 };
 
 .book-list {
-    border: 1px;
-    border-style: solid;
-    border-radius: 20px;
-    border-color: black;
-
     display: flex;
     flex-direction: column;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 5%;
-
     width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
 
+.book-item {
+    border-left: 3px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    padding-left: 5%;
+
+    border-style: solid;
+    border-radius: 15px;
+}
+
+.book-progress, .goal-progress {
+    color: $secondary-color;
 }

@@ -1,12 +1,12 @@
-<script setup>
+<script setup lang="">
 import BookItemVue from "./BookItem.vue";
 </script>
 
 <template>
   <section class="book-list">
     <div class="book-list-settings">
-      <h4>Reading</h4>
-      <q-btn id="add-book" icon="bi-plus-square" flat />
+      <p id="title">Reading</p>
+      <q-btn id="add-book" icon="bi-plus-square" size="small" flat />
     </div>
     <BookItemVue />
   </section>
@@ -15,5 +15,12 @@ import BookItemVue from "./BookItem.vue";
 <style scoped>
 .book-list-settings {
   display: flex;
+  height: 50px;
+  margin: 2%;
+  margin-top: 5%;
+}
+
+#title {
+  font-size: xx-large;
 }
 </style>

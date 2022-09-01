@@ -6,7 +6,6 @@ const goals = defineProps<{
   value: number;
   editable: boolean;
 }>();
-console.log(typeof goals.editable)
 </script>
 
 <template>
@@ -16,8 +15,7 @@ console.log(typeof goals.editable)
       class="goal-progress"
       id="habit-tracker"
       size="150px"
-      track-color="light-blue"
-      color="pink"
+      track-color="pink-8"
       reverse
       show-value
       :value="goals.value"
