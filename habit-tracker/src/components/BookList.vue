@@ -1,4 +1,4 @@
-<script setup lang="">
+<script setup lang="ts">
 import BookItemVue from "./BookItem.vue";
 </script>
 
@@ -17,7 +17,8 @@ import BookItemVue from "./BookItem.vue";
   display: flex;
   height: 50px;
   margin: 2%;
-  margin-top: 5%;
+  margin-top: 3%;
+  margin-bottom: 5%;
 }
 
 #title {

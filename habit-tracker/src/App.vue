@@ -54,8 +54,13 @@ function setGoal() {
         :amount="readingGoal.pagesGoal"
         :value="readingGoal.pages"
       />
-      <HabbitGoalVue class="pages-score" name="Minutes" editable="false"
-      :amount="readingGoal.timeGoal" :value="readingGoal.minutes" /
+      <HabbitGoalVue
+        class="pages-score"
+        name="Minutes"
+        editable="false"
+        :amount="readingGoal.timeGoal"
+        :value="readingGoal.minutes"
+      />
     </div>
     <BookListVue />
     <FinishedListVue />
