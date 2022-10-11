@@ -26,7 +26,7 @@ function setGoal() {
 
 <template>
   <div class="book-tracker-body">
-    <h2 class="habit-title">Book tracker</h2>
+    <h1 class="habit-title">Book tracker</h1>
     <div class="goals">
       <HabbitGoalVue v-bind="readingGoal">
         <div style="display: flex">
@@ -40,13 +40,13 @@ function setGoal() {
           />
         </div>
       </HabbitGoalVue>
-      <q-btn
+      <!-- <q-btn
         flat
         id="goal-edit"
         icon="bi-pencil-fill"
         size="xs"
         @click="setGoal()"
-      ></q-btn>
+      ></q-btn> -->
       <HabbitGoalVue
         class="time-reading-goal"
         name="Pages"
@@ -68,8 +68,12 @@ function setGoal() {
 </template>
 
 <style scoped>
+h1 {
+  font-size: xx-large;
+}
 .goals {
   display: flex;
+  gap: 1rem;
 }
 #goal-input {
   width: 50px;

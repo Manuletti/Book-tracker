@@ -14,7 +14,7 @@ const goals = defineProps<{
     <q-circular-progress
       class="goal-progress"
       id="habit-tracker"
-      size="150px"
+      size="100px"
       track-color="pink-8"
       reverse
       show-value
@@ -33,9 +33,13 @@ const goals = defineProps<{
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+  border: 1px;
+  border-style: solid;
+  border-radius: 15px;
 }
 .goal-label {
-  font-size: xx-large;
+  font-size: large;
 }
 .goal-progress {
   margin: 1rem;
