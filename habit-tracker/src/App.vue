@@ -27,6 +27,14 @@ function setGoal() {
 <template>
   <div class="book-tracker-body">
     <h1 class="habit-title">Book tracker</h1>
+
+    <!-- This should be a component -->
+    <div class="filters">
+      <input type="radio" name="filter" />All
+      <input type="radio" name="filter" />Sci-Fi
+      <input type="radio" name="filter" />Non Fiction
+    </div>
+
     <div class="goals">
       <HabbitGoalVue v-bind="readingGoal">
         <div style="display: flex">
@@ -62,6 +70,7 @@ function setGoal() {
         :value="readingGoal.minutes"
       />
     </div>
+
     <BookListVue />
     <FinishedListVue />
   </div>
