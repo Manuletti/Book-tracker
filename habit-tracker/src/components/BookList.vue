@@ -4,8 +4,7 @@ import BookItemVue from "./BookItem.vue";
 
 <template>
   <section class="book-list">
-    <div class="book-list-settings">
-    </div>
+    <div class="book-list-settings"></div>
     <BookItemVue />
   </section>
 </template>
@@ -17,5 +16,4 @@ import BookItemVue from "./BookItem.vue";
   margin-top: 3%;
   margin-bottom: 5%;
 }
-
 </style>

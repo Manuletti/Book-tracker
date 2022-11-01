@@ -48,13 +48,6 @@ function setGoal() {
           />
         </div>
       </HabbitGoalVue>
-      <!-- <q-btn
-        flat
-        id="goal-edit"
-        icon="bi-pencil-fill"
-        size="xs"
-        @click="setGoal()"
-      ></q-btn> -->
       <HabbitGoalVue
         class="time-reading-goal"
         name="Pages"
@@ -82,7 +75,7 @@ h1 {
 }
 .goals {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
 }
 #goal-input {
   width: 50px;
