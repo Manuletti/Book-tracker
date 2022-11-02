@@ -4,10 +4,7 @@ import BookItemVue from "./BookItem.vue";
 
 <template>
   <section class="book-list">
-    <div class="book-list-settings">
-      <p id="title">Reading</p>
-      <q-btn id="add-book" icon="bi-plus-square" size="small" flat />
-    </div>
+    <div class="book-list-settings"></div>
     <BookItemVue />
   </section>
 </template>
@@ -15,13 +12,8 @@ import BookItemVue from "./BookItem.vue";
 <style scoped>
 .book-list-settings {
   display: flex;
-  height: 50px;
   margin: 2%;
   margin-top: 3%;
   margin-bottom: 5%;
-}
-
-#title {
-  font-size: xx-large;
 }
 </style>

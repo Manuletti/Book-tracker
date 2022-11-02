@@ -11,15 +11,13 @@ const goals = defineProps<{
 <template>
   <section class="goals-page">
     <label class="goal-label" for="books-goal">{{ goals.name }}</label>
-    <q-circular-progress
+    <q-linear-progress
+      stripe
+      rounded
+      size="20px"
+      :value="goals.value / 100"
+      color="warning"
       class="goal-progress"
-      id="habit-tracker"
-      size="150px"
-      track-color="pink-8"
-      reverse
-      show-value
-      :value="goals.value"
-      :max="goals.amount"
     />
     <!-- This doesn't render in pages and minutes component -->
     <p id="goal" v-if="!goals.editable">Goal: {{ goals.amount }}</p>
@@ -33,9 +31,14 @@ const goals = defineProps<{
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  border: 1px;
+  border-style: solid;
+  border-radius: 15px;
+
 }
 .goal-label {
-  font-size: xx-large;
+  font-size: large;
 }
 .goal-progress {
   margin: 1rem;
