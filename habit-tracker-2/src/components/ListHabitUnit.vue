@@ -1,0 +1,9 @@
+<template>
+  <q-circular-progress
+    :value="55"
+    size="200px"
+    thickness="0.4"
+    color="orange"
+    track-color="blue"
+  />
+</template>

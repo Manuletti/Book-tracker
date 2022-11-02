@@ -1,11 +1,13 @@
-<script lang="ts"></script>
+<script setup lang="ts">
+import ListHabitUnitVue from "./ListHabitUnit.vue";
+</script>
 
 <template>
   <section class="list-box">
     <nav class="list-menu">
       <button id="add-habit">+</button>
     </nav>
-    <h3>Hello, I am HabitsList</h3>
+    <ListHabitUnitVue />
   </section>
 </template>
 
