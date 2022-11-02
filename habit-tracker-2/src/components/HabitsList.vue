@@ -4,10 +4,14 @@ import HabitListUnitVue from "./HabitListUnit.vue";
 
 <template>
   <section class="list-box">
+<<<<<<< HEAD
     <nav class="list-menu">
       <button id="add-habit">+</button>
     </nav>
     <HabitListUnitVue />
+=======
+    <h3>Hello, I am HabitsList</h3>
+>>>>>>> parent of cec6e9b (btn added)
   </section>
 </template>
 
@@ -25,8 +29,5 @@ import HabitListUnitVue from "./HabitListUnit.vue";
 
   background: #f7f7f7;
   border: 1px solid #a5a5a5;
-}
-#add-habit {
-  font-size: x-large;
 }
 </style>

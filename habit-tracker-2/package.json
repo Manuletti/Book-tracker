@@ -1,6 +1,7 @@
 {
   "name": "habit-tracker-2",
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "build": "run-p type-check build-only",
     "test:unit": "vitest --environment jsdom --root src/",
@@ -38,6 +39,5 @@
     "vitest": "^0.24.3",
     "vue-cli-plugin-quasar": "~5.0.1",
     "vue-tsc": "^1.0.8"
-  },
-  "type": "module"
+  }
 }

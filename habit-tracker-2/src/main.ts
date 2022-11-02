@@ -6,7 +6,7 @@ import "./assets/style.css";
 import iconSet from "quasar/icon-set/bootstrap-icons";
 import "@quasar/extras/bootstrap-icons/bootstrap-icons.css";
 import { Quasar } from "quasar";
-import quasarUserOptions from "./quasar-user-options.js";
+import quasarUserOptions from "./quasar-user-options";
 // import router from "./router";
 
 const app = createApp(App).use(Quasar, quasarUserOptions);
