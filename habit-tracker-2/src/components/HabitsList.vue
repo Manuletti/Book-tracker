@@ -7,7 +7,9 @@ import ListHabitUnitVue from "./ListHabitUnit.vue";
     <nav class="list-menu">
       <button id="add-habit">+</button>
     </nav>
-    <ListHabitUnitVue />
+    <div class="list">
+      <ListHabitUnitVue />
+    </div>
   </section>
 </template>
 
@@ -25,6 +27,12 @@ import ListHabitUnitVue from "./ListHabitUnit.vue";
 
   background: #f7f7f7;
   border: 1px solid #a5a5a5;
+
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #add-habit {
   font-size: x-large;
