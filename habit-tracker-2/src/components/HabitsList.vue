@@ -2,6 +2,9 @@
 
 <template>
   <section class="list-box">
+    <nav class="list-menu">
+      <button id="add-habit">+</button>
+    </nav>
     <h3>Hello, I am HabitsList</h3>
   </section>
 </template>
@@ -20,5 +23,8 @@
 
   background: #f7f7f7;
   border: 1px solid #a5a5a5;
+}
+#add-habit {
+  font-size: x-large;
 }
 </style>
