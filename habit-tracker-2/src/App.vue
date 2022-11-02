@@ -4,8 +4,16 @@ import HabitViewVue from "./components/HabitView.vue";
 </script>
 
 <template>
-  <section>
+  <section class="body">
     <HabitListVue />
     <HabitViewVue />
   </section>
 </template>
+
+<style>
+.body {
+  display: flex;
+  gap: 2rem;
+
+}
+</style>
